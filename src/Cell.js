@@ -10,8 +10,6 @@ export default function Cell({ item, rIndex, cIndex, handleClick }) {
         width: "90px",
         height: "90px",
         color: "black",
-        fontWeight: 700,
-        fontSize: "25px",
         backgroundColor: isDisable && "rgb(255 255 255 / 76%)",
         border: "5px solid",
         borderCollapse: "collapse",
@@ -19,12 +17,11 @@ export default function Cell({ item, rIndex, cIndex, handleClick }) {
       }}
       color="warning"
       onClick={() => {
-        console.log(rIndex, cIndex);
         handleClick(rIndex, cIndex);
       }}
       disabled={isDisable}
     >
-      {item === "Q" && <img alt="" style={{ width: "80px" }} src={queen} />}
+      {item === "Q" && <img alt="" style={{ width: "75px" }} src={queen} />}
     </Button>
   );
 }

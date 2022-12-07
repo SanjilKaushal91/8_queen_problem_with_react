@@ -19,8 +19,6 @@ function App() {
   const handleClick = (rIndex, cIndex) => {
     for (let i = 0; i < length; i++) {
       arr.current[rIndex][i] = "*";
-    }
-    for (let i = 0; i < length; i++) {
       arr.current[i][cIndex] = "*";
     }
     for (let i = rIndex, j = cIndex; i < length && j < length; i++, j++) {
@@ -36,7 +34,6 @@ function App() {
       arr.current[i][j] = "*";
     }
     arr.current[rIndex][cIndex] = "Q";
-
     setTemp(temp + 1);
   };
 
